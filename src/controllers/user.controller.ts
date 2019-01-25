@@ -1,10 +1,17 @@
 import { Request, Response } from 'express';
 import User, { IUser } from '../models/user.model';
 
-async function CreateUser(req: Request, res: Response): Promise<Response> {
-  const { email, firstName, lastName } = req.body;
-
-  const user = await User.create({
+type TCreateUserInput = {
+  email: string;
+  firstName: string;
+  lastName: string;
+};
+async function CreateUser({
+  email,
+  firstName,
+  lastName
+}: TCreateUserInput): Promise<IUser> {
+  return await User.create({
     email,
     firstName,
     lastName
@@ -15,8 +22,6 @@ async function CreateUser(req: Request, res: Response): Promise<Response> {
     .catch((error: Error) => {
       throw error;
     });
-
-  return res.send(user);
 }
 
 export default {
