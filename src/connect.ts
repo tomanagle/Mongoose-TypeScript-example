@@ -1,7 +1,10 @@
 import mongoose from 'mongoose';
 
-export default () => {
-  const db = 'mongodb://localhost:27017/test';
+type TInput = {
+  db: string;
+}
+export default ({db}: TInput) => {
+  
   const connect = () => {
     mongoose
       .connect(

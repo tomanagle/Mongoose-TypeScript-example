@@ -1,23 +1,27 @@
 {
   "name": "mongoose-typescript-example",
   "version": "1.0.0",
-  "description": "Strongly types models with Mongoose and TypeScript",
+  "description": "Strongly typed models with Mongoose and TypeScript",
   "main": "src/index.ts",
   "author": "Tom Nagle",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "test": "jest"
   },
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@types/body-parser": "^1.17.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.6"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.17.0",
     "@types/express": "^4.16.1",
+    "@types/jest": "^23.3.13",
     "@types/mongoose": "^5.3.9",
+    "jest": "^24.0.0",
+    "ts-jest": "^23.10.5",
     "ts-node": "^8.0.1",
     "typescript": "^3.2.4"
   }
