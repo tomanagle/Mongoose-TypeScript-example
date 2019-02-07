@@ -1,12 +1,10 @@
 import mongodb from 'mongodb';
-
+import User from '../user.model';
 let connection: any;
 let db: any;
 
 describe('User model', () => {
   beforeAll(async () => {
-    console.log('global.__MONGO_URI__', global.__MONGO_URI__);
-    console.log('global.__MONGO_DB_NAME__', global.__MONGO_DB_NAME__);
     connection = await mongodb.connect(global.__MONGO_URI__, {
       useNewUrlParser: true
     });
@@ -18,7 +16,9 @@ describe('User model', () => {
     await db.close();
   });
 
-  it('Should fail', () => {
-    expect(true).toBe(true);
+  it('Should throw validation errors', () => {
+    const user = new User();
+
+    expect(user.validate).toThrow();
   });
 });
