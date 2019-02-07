@@ -1,5 +1,5 @@
 import mongodb from 'mongodb';
-import User from '../user.model';
+import User, { IUser } from '../user.model';
 let connection: any;
 let db: any;
 
@@ -20,5 +20,16 @@ describe('User model', () => {
     const user = new User();
 
     expect(user.validate).toThrow();
+  });
+
+  it('Should save a user', async () => {
+    const user: IUser = new User({
+      firstName: 'Test first name',
+      lastName: 'Test last name',
+      email: 'test@example.com'
+    });
+    const spy = jest.spyOn(user, 'save');
+    user.save();
+    expect(spy).toHaveBeenCalled();
   });
 });
