@@ -1,17 +1,15 @@
-import { Request, Response } from 'express';
 import User, { IUser } from '../models/user.model';
 
-type TCreateUserInput = {
-  email: string;
-  firstName: string;
-  lastName: string;
-};
 async function CreateUser({
   email,
   firstName,
   lastName
-}: TCreateUserInput): Promise<IUser> {
-  return await User.create({
+}: {
+  email: string;
+  firstName: string;
+  lastName: string;
+}): Promise<IUser> {
+  return User.create({
     email,
     firstName,
     lastName

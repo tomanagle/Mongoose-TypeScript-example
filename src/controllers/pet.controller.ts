@@ -1,11 +1,13 @@
 import Pet, { IPet } from '../models/pet.model';
 import mongoose from 'mongoose';
 
-type TCreateUserInput = {
+async function CreatePet({
+  owner,
+  name
+}: {
   owner: mongoose.Schema.Types.ObjectId;
   name: string;
-};
-async function CreatePet({ owner, name }: TCreateUserInput): Promise<IPet> {
+}): Promise<IPet> {
   return await Pet.create({
     owner,
     name
