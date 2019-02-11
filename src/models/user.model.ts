@@ -12,4 +12,5 @@ const UserSchema: Schema = new Schema({
   lastName: { type: String, required: true }
 });
 
+// Export the model and return your IUser interface
 export default mongoose.model<IUser>('User', UserSchema);

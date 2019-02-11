@@ -6,7 +6,6 @@ describe('User controller', async () => {
     await mongoose.connect(global.__MONGO_URI__, {
       useNewUrlParser: true
     });
-    // db = await connection.db(global.__MONGO_DB_NAME__);
   });
 
   afterAll(async () => {

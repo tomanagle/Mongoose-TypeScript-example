@@ -19,6 +19,8 @@ describe('User model', () => {
   });
 
   it('Should save a user', async () => {
+    expect.assertions(3);
+
     const user: IUser = new User({
       firstName: 'Test first name',
       lastName: 'Test last name',
@@ -26,6 +28,15 @@ describe('User model', () => {
     });
     const spy = jest.spyOn(user, 'save');
     user.save();
+
     expect(spy).toHaveBeenCalled();
+
+    expect(user).toMatchObject({
+      firstName: expect.any(String),
+      lastName: expect.any(String),
+      email: expect.any(String)
+    });
+
+    expect(user.email).toBe('test@example.com');
   });
 });

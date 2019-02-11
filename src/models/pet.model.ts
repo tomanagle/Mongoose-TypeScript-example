@@ -1,8 +1,9 @@
 import mongoose, { Schema, Document } from 'mongoose';
+import { IUser } from './user.model';
 
 export interface IPet extends Document {
   name: string;
-  owner: mongoose.Schema.Types.ObjectId;
+  owner: IUser['_id'];
 }
 
 const PetSchema: Schema = new Schema({
