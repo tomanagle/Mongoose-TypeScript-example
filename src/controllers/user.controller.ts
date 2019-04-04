@@ -1,14 +1,16 @@
 import User, { IUser } from '../models/user.model';
 
+interface ICreateUserInput {
+  email: IUser['email'];
+  firstName: IUser['firstName'];
+  lastName: IUser['lastName'];
+}
+
 async function CreateUser({
   email,
   firstName,
   lastName
-}: {
-  email: string;
-  firstName: string;
-  lastName: string;
-}): Promise<IUser> {
+}: ICreateUserInput): Promise<IUser> {
   return User.create({
     email,
     firstName,

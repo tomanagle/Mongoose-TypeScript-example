@@ -1,5 +1,5 @@
-import Pet, { IPet } from '../models/pet.model';
 import mongoose from 'mongoose';
+import Pet, { IPet } from '../models/pet.model';
 
 async function CreatePet({
   owner,
