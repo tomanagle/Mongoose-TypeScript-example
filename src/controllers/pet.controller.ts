@@ -1,13 +1,12 @@
-import mongoose from 'mongoose';
 import Pet, { IPet } from '../models/pet.model';
+import { IUser } from '../models/user.model';
 
-async function CreatePet({
-  owner,
-  name
-}: {
-  owner: mongoose.Schema.Types.ObjectId;
-  name: string;
-}): Promise<IPet> {
+interface ICreatePetInput {
+  owner: IUser['_id'];
+  name: IPet['name'];
+}
+
+async function CreatePet({ owner, name }: ICreatePetInput): Promise<IPet> {
   return await Pet.create({
     owner,
     name
