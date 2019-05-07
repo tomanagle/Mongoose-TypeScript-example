@@ -1,17 +1,17 @@
-import { Request, Response } from 'express';
 import User, { IUser } from '../models/user.model';
 
-type TCreateUserInput = {
-  email: string;
-  firstName: string;
-  lastName: string;
-};
+interface ICreateUserInput {
+  email: IUser['email'];
+  firstName: IUser['firstName'];
+  lastName: IUser['lastName'];
+}
+
 async function CreateUser({
   email,
   firstName,
   lastName
-}: TCreateUserInput): Promise<IUser> {
-  return await User.create({
+}: ICreateUserInput): Promise<IUser> {
+  return User.create({
     email,
     firstName,
     lastName
