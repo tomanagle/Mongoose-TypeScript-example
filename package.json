@@ -6,14 +6,17 @@
   "author": "Tom Nagle",
   "scripts": {
     "dev": "nodemon",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "MIT",
   "private": false,
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mongoose": "^5.4.6"
+    "mongoose": "^5.4.6",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
@@ -25,5 +28,6 @@
     "ts-jest": "^23.10.5",
     "ts-node": "^8.0.1",
     "typescript": "^3.2.4"
-  }
+  },
+  "snyk": true
 }
