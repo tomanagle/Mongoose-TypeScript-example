@@ -19,7 +19,7 @@
     "snyk": "^1.199.0"
   },
   "devDependencies": {
-    "@types/body-parser": "^1.17.0",
+    "@types/body-parser": "^1.17.1",
     "@types/express": "^4.17.1",
     "@types/jest": "^23.3.13",
     "@types/mongoose": "^5.3.9",
