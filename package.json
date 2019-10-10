@@ -21,7 +21,7 @@
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/express": "^4.17.1",
-    "@types/jest": "^23.3.13",
+    "@types/jest": "^24.0.18",
     "@types/mongoose": "^5.3.9",
     "jest": "^23.0.0",
     "mongodb-memory-server": "^3.0.0",
