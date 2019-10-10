@@ -16,7 +16,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.6",
-    "snyk": "^1.199.0"
+    "snyk": "^1.234.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
