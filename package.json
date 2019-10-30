@@ -14,7 +14,7 @@
   "private": false,
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "mongoose": "^5.7.5",
     "snyk": "^1.230.5"
   },
