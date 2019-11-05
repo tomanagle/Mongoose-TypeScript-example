@@ -498,9 +498,10 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongoose@^5.5.22":
-  version "5.5.22"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.5.22.tgz#e5a507ba81e41480f9de564917bb250faba00bc4"
+"@types/mongoose@^5.5.29":
+  version "5.5.29"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.5.29.tgz#611cb2eaed58d8d12d3f6338d8811290a4407f0f"
+  integrity sha512-bIlJfCIg/pPhORc35hGs14gmDjPLIPffcs20UgMZFB8bw0WPIAkDRTZJlBLpuZ0UgHTOOxcSt56exkUv7f/1Yw==
   dependencies:
     "@types/mongodb" "*"
     "@types/node" "*"
