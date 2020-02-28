@@ -21,7 +21,7 @@
     "@types/body-parser": "^1.17.1",
     "@types/express": "^4.17.2",
     "@types/jest": "^24.0.25",
-    "@types/mongoose": "^5.5.38",
+    "@types/mongoose": "^5.7.3",
     "jest": "^24.9.0",
     "mongodb-memory-server": "^6.2.1",
     "snyk": "^1.274.0",
