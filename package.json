@@ -27,7 +27,7 @@
     "snyk": "^1.274.0",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.4"
+    "typescript": "^3.9.2"
   },
   "snyk": true
 }
