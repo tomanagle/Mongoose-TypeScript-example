@@ -24,7 +24,7 @@
     "@types/mongoose": "^5.5.38",
     "jest": "^24.9.0",
     "mongodb-memory-server": "^6.2.1",
-    "snyk": "^1.274.0",
+    "snyk": "^1.336.0",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
