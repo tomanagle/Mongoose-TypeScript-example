@@ -16,8 +16,8 @@ export interface IUser extends Document {
   email: string;
   firstName: string;
   lastName: string;
-  gender: Gender;
-  address: Address;
+  gender?: Gender;
+  address?: Address;
 }
 
 const UserSchema: Schema = new Schema({

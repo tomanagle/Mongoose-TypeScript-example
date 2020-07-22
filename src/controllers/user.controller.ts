@@ -1,20 +1,19 @@
 import User, { IUser } from '../models/user.model';
-
-interface ICreateUserInput {
-  email: IUser['email'];
-  firstName: IUser['firstName'];
-  lastName: IUser['lastName'];
-}
+import { CreateQuery } from 'mongoose';
 
 async function CreateUser({
   email,
   firstName,
-  lastName
-}: ICreateUserInput): Promise<IUser> {
+  lastName,
+  gender,
+  address
+}: CreateQuery<IUser>): Promise<IUser> {
   return User.create({
     email,
+    gender,
     firstName,
-    lastName
+    lastName,
+    address
   })
     .then((data: IUser) => {
       return data;
