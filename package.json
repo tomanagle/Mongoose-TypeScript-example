@@ -11,6 +11,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@typegoose/typegoose": "^7.4.7",
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
     "mongoose": "^5.9.25",

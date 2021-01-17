@@ -1,14 +1,12 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import { prop, getModelForClass } from '@typegoose/typegoose';
 import { IUser } from './user.model';
 
-export interface IPet extends Document {
-  name: string;
-  owner: IUser['_id'];
+export class IPet {
+  @prop()
+  public name: string;
+
+  @prop({ type: () => [String] })
+  public owner: IUser['_id'];
 }
 
-const PetSchema: Schema = new Schema({
-  name: { type: String, required: true },
-  owner: { type: Schema.Types.ObjectId, required: true }
-});
-
-export default mongoose.model<IPet>('Pet', PetSchema);
+export default getModelForClass(IPet);

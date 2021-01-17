@@ -7,16 +7,14 @@ interface ICreatePetInput {
 }
 
 async function CreatePet({ owner, name }: ICreatePetInput): Promise<IPet> {
-  return await Pet.create({
+  const pet = await Pet.create({
     owner,
     name
-  })
-    .then((data: IPet) => {
-      return data;
-    })
-    .catch((error: Error) => {
-      throw error;
-    });
+  });
+
+  pet.own;
+
+  return pet;
 }
 
 export default {

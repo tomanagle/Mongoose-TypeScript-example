@@ -7,20 +7,16 @@ async function CreateUser({
   lastName,
   gender,
   address
-}: CreateQuery<IUser>): Promise<IUser> {
-  return User.create({
+}: any) {
+  const user = await User.create({
     email,
     gender,
     firstName,
     lastName,
     address
-  })
-    .then((data: IUser) => {
-      return data;
-    })
-    .catch((error: Error) => {
-      throw error;
-    });
+  });
+
+  return user;
 }
 
 export default {
